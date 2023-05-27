@@ -8,15 +8,19 @@ const noEncontrado = document.querySelector(".no_encontrado");
 const encontrado = document.querySelector(".encontrado");
 
 encriptar.addEventListener("click", () => {
-    resultado.value = encriptarMensaje(data.value);
-    noEncontrado.style.display = "none";
-    encontrado.style.display = "block";
+    if (data.value.trim() !== "") {
+        resultado.value = encriptarMensaje(data.value);
+        noEncontrado.style.display = "none";
+        encontrado.style.display = "block";
+    }
 });
 
 desencriptar.addEventListener("click", () => {
-    resultado.value = desencriptarMensaje(data.value);
-    noEncontrado.style.display = "none";
-    encontrado.style.display = "block";
+    if (data.value.trim() !== "") {
+        resultado.value = desencriptarMensaje(data.value);
+        noEncontrado.style.display = "none";
+        encontrado.style.display = "block";
+    }
 });
 
 copiar.addEventListener("click", () => {
